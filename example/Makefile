@@ -3,7 +3,7 @@
 #
 
 CC      ?= gcc
-CFLAGS  += -g -I../src
+CFLAGS  += -g -static -I../src
 LFLAGS  += -L.. -liniparser
 AR	    ?= ar
 ARFLAGS += rcv
