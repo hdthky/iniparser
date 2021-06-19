@@ -15,10 +15,10 @@ default: all
 all: iniexample parse
 
 iniexample: iniexample.c
-	$(CC) $(CFLAGS) -o iniexample iniexample.c ../src/iniparser.c
+	$(CC) $(CFLAGS) -o iniexample iniexample.c -I../src ../src/iniparser.c ../src/dictionary.c
 
 parse: parse.c
-	$(CC) $(CFLAGS) -o parse parse.c ../src/iniparser.c
+	$(CC) $(CFLAGS) -o parse parse.c -I../src ../src/iniparser.c ../src/dictionary.c
 
 clean veryclean:
 	$(RM) iniexample example.ini parse
